@@ -49,15 +49,162 @@
                     <img src="./assets/img/logo1.webp" alt="Ceasar logo" />
                 </div>
             </header>
-            
+
             <main class="main">
                 <section class="encode">
-                  <H2>ENCODE</H2>
+                    <h2 class="H2">ENCODE</h2>
+                    <form action="" class="form">
+                        <label for="textarea_encode">
+                            <p>max 100 chars</p>
+                            <textarea
+                                class="text_area"
+                                name="textarea_encode"
+                                id="textarea_encode"
+                                placeholder="Enter text to encode"
+                            ></textarea>
+                        </label>
+
+                        <ul class="settings">
+                            <li class="settings_box">
+                                 <label for="en_upp">
+                                     <h3 class="checkBox--H3">
+                                         uppercase
+                                     </h3>
+                                    <input type="checkbox" id="en_upp" />
+                                </label>
+                            </li>
+    
+                            <li class="settings_box">
+                                <label for="en_dig">
+                                    <h3 class="checkBox--H3">
+                                        numbers
+                                    </h3>
+                                    <input type="checkbox" id="en_dig" />
+                                </label>
+                            </li>
+    
+                            <li class="settings_box">
+                                <label for="en_sym">
+                                    <h3 class="checkBox--H3">
+                                        symbols
+                                    </h3>
+                                    <input type="checkbox" id="en_sym" />
+                                </label>
+                            </li>
+                        </ul>
+
+                        
+                        <label for="encode_slider" class="slider_label">
+                            <p class="max_shift">max: <span id="en_value">26</span></p>
+                            <h3 class="H3 shift">Cipher shift</h3>
+                            <input
+                                type="range"
+                                id="encode_slider"
+                                class="slider"
+                                min="1"
+                                max="26"
+                                value="13"
+                            />
+                            <progress
+                                class="progressbar"
+                                max="26"
+                                id="encode_progressbar"
+                            ></progress>
+                        </label>
+                    </form>
+
+                    <div class="cipher_shift">
+                        <h3 class="H3" id="encode_value">26</h3>
+                    </div>
+                    
+                    <div class="execute">
+                        <h2 class="execute_H2" id="execute_encode">Execute</h2>
+                    </div>
+
+                    <div class="result">
+                        <h4 class="H4">Result</h4>
+                        <div class="content">
+                            <h5 id="result_encode"></h5>
+                        </div>
+                    </div>
                 </section>
 
                 <section class="decode">
-                    <H2>DECODE</H2>
-                    
+                    <h2 class="H2">DECODE</h2>
+                    <form action="" class="form">
+                        <label for="textarea_decode">
+                            <p>max 100 chars</p>
+                            <textarea
+                                class="text_area"
+                                name="textarea_decode"
+                                id="textarea_decode"
+                                placeholder="Enter text to decode"
+                            ></textarea>
+                        </label>
+
+                        <ul class="settings">
+                            <li class="settings_box">
+                                <label for="symbols">
+                                    <input type="checkbox" id="de_upper" />
+                                    <h3 class="checkBox--H3">
+                                        uppercase
+                                    </h3>
+                                </label>
+                            </li>
+    
+                            <li class="settings_box">
+                                <label for="symbols">
+                                    <input type="checkbox" id="de_num" />
+                                    <h3 class="checkBox--H3">
+                                        numbers
+                                    </h3>
+                                </label>
+                            </li>
+    
+                            <li class="settings_box">
+                                <label for="symbols">
+                                    <input type="checkbox" id="de_sym" />
+                                    <h3 class="checkBox--H3">
+                                        Symbols
+                                    </h3>
+                                </label>
+                            </li>
+                        </ul>
+
+                        
+                        <label for="encode_slider" class="slider_label">
+                            <p class="max_shift">max: <span id="de_value">26</span></p>
+                            <h3 class="H3 shift">Cipher shift</h3>
+                            <input
+                                type="range"
+                                id="decode_slider"
+                                class="slider"
+                                min="1"
+                                max="26"
+                                value="13"
+                            />
+                            <progress
+                                class="progressbar"
+                                max="26"
+                                id="decode_progressbar"
+                            ></progress>
+                        </label>
+                    </form>
+                    <div class="cipher_shift">
+                        <h3 class="H3 decode_value">26</h3>
+                    </div>
+
+                    <div class="execute">
+                        <h2 class="execute_H2" id="execute_decode">Execute</h2>
+                        <h2 class="execute_H2">Analyze</h2>
+                    </div>
+
+                    <div class="result">
+                        <h4 class="H4">Result</h4>
+                        <div class="content">
+                            <h5 id="result_decode"></h5>
+                        </div>
+                    </div>
                 </section>
             </main>
         </div>

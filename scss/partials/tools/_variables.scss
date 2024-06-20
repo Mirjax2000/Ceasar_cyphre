@@ -22,7 +22,7 @@ $clr21: #00000079;
 $clr22: #1e273bc0;
 $clr23: #fff1d9;
 $clr24: #ffa200;
-$clr25: #004cffc2;
+$clr25: #0c55ffc2;
 
 $clr99: #505050;
 // -----------------------
@@ -30,8 +30,9 @@ $clr99: #505050;
 // backround color
 $bck__color: (
     'header': $clr22,
-    'encode H2': $clr25,
-    'decode H2': $clr25,
+    'H2': $clr25,
+    'slider': transparent,
+    'progressbar': transparent,
 
 );
 $clr-bg-img: $clr99;
@@ -39,14 +40,10 @@ $clr-bg-img: $clr99;
 
 // fonts - sizes and colors
 $fonts__color: (
-    'header--H1': $clr12,
-    'result--H3': $clr14,
-    'length--H2': $clr16,
-    'length--H3': $clr14,
-    'checkBox--H3': $clr14,
-    'strength--H3': $clr12,
-    'indicator--H1': $clr14,
-    'generate--H3': $clr11,
+    'header H1': $clr10,
+    'encode H2': $clr10,
+    'decode H2': $clr10,
+    'text_area': $clr14,
 );
 
 $fonts: (
@@ -109,7 +106,7 @@ $fonts: (
     //     spacing--PC: 0.12px,
     //     spacing--Mb: 0.12px,
     //     weight: 500,
-    // ),,,,,,,,,,,,,,,,,,,,
+    // ),,,,,,,,,,,,,,,,,,,,,
 );
 // -------------------------
 
