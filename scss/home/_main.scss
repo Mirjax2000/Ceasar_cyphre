@@ -34,11 +34,11 @@
 
 .container {
     @include container(em(1440, 16));
-    background-image: url('../assets/img/ceasar_BG.webp');
+    background-image: url('../assets/img/ceasar2.webp');
     background-color: $clr21;
     background-blend-mode: multiply;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-position: center top;
 }
 .header {
@@ -56,6 +56,7 @@
     H1 {
         letter-spacing: 2px;
     }
+    
     .logo {
         img {
             border-radius: 50%;
@@ -68,7 +69,6 @@
 .main {
     display: flex;
     justify-content: space-between;
-    gap: em(16, 16);
 
     & > * {
         height: calc(100svh - em(107, 16));
@@ -79,6 +79,13 @@
 
 .encode,
 .decode {
+    background-color: transparent;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+        background-color: $clr21;
+    }
+
     .settings,
     .text_area,
     .cipher_shift .H3,
