@@ -7,43 +7,32 @@ $debug: false;
 
 // --- color pallete ---
 $clr10: #ffffff;
-$clr11: #24232c;
+$clr11: #081118;
 $clr12: #817d92;
 $clr13: #9eafc2;
 $clr14: #e6e5ea;
-$clr15: #18171f;
+$clr15: #050606;
 $clr16: #a4ffaf;
 $clr17: #f64a4a;
 $clr18: #fb7c58;
 $clr19: #f8cd65;
 
-$clr20: #fd823f;
-$clr21: #979797;
-$clr22: #c1c4cb;
+$clr20: #000000;
+$clr21: #00000079;
+$clr22: #1e273bc0;
 $clr23: #fff1d9;
-$clr24: #436bfa;
-$clr25: #4e74ff;
+$clr24: #ffa200;
+$clr25: #004cffc2;
 
 $clr99: #505050;
 // -----------------------
 
 // backround color
 $bck__color: (
-    'home': $clr15,
-    'break': $clr15,
+    'header': $clr22,
+    'encode H2': $clr25,
+    'decode H2': $clr25,
 
-    'result': $clr11,
-    'main': $clr11,
-
-    'btn': $clr16,
-    'checkbox': $clr16,
-    'generate': $clr16,
-    'slider': $clr15,
-    
-    'tooweak': $clr17,
-    'weak': $clr18,
-    'medium': $clr19,
-    'strong': $clr16,
 );
 $clr-bg-img: $clr99;
 // -------------------------

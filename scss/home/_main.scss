@@ -6,33 +6,20 @@
 // --------------------
 
 .home {
-    font-family: 'JetBrainsMono', monospace;
+    color: $clr10;
     user-select: none;
+    background: linear-gradient(to right, $clr15, $clr11);
 }
 
-.container {
-    @include container(em(1440, 16));
-}
-
-.section {
-    width: em(540, 16);
-}
-
-@each $element, $styles in $fonts {
-    .#{$element} {
-        // color: map-get($styles, color);
-        font-weight: map-get($styles, weight);
-        font-size: map-get($styles, size--PC);
-        // line-height: map-get($styles, height--PC);
-        // letter-spacing: map-get($styles, spacing--PC);
-    }
-}
-
-@each $element, $color in $fonts__color {
-    .#{$element} {
-        color: $color;
-    }
-}
+// @each $element, $styles in $fonts {
+//     .#{$element} {
+//         // color: map-get($styles, color);
+//         // font-weight: map-get($styles, weight);
+//         // font-size: map-get($styles, size--PC);
+//         // line-height: map-get($styles, height--PC);
+//         // letter-spacing: map-get($styles, spacing--PC);
+//     }
+// }
 
 @each $element, $color in $bck__color {
     .#{$element} {
@@ -40,253 +27,55 @@
     }
 }
 
-.header {
-    &--H1 {
-        margin-bottom: em(31, 24);
-        text-align: center;
-    }
+.container {
+    @include container(em(1440, 16));
+    background-image: url('../assets/img/ceasar_BG.webp');
+    background-color: $clr21;
+    background-blend-mode:multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
 }
+.header {
+    font-family: cinzel, serif;
+    padding: em(16, 16);
 
-.result {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: em(19, 16) em(32, 16);
-    margin-bottom: em(24, 16);
-    user-select: text;
-    svg {
-        cursor: pointer;
+    gap: em(16, 16);
+    border-radius: 5px;
 
-        &:hover {
-            path {
-                fill: $clr14;
-            }
-        }
-        &:active {
-            transform: translateY(2px);
-        }
+    H1 {
+        letter-spacing: 2px;
     }
-    .opacity {
-        opacity: 0.1;
+    .logo {
+        img {
+            border-radius: 50%;
+            max-width: em(75, 16);
+            box-shadow: 0px 0px 6px $clr24;
+        }
     }
 }
 
 .main {
-    padding: em(32, 16);
-
-    .length {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: em(16, 16);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    & > * {
+        flex-basis: 100%;
+        padding: em(32, 16);
     }
+}
 
-    .slider__container {
-        padding-block: em(4, 16);
-        position: relative;
-
-        #slider,
-        #progressBar {
-            position: absolute;
-            appearance: none;
-            height: em(8, 16);
-            outline: none;
-            width: 100%;
-            top: 0;
-            left: 0;
-            background-color: $clr15;
-            border: none;
-            cursor: pointer;
-        }
-
-        #slider::-webkit-slider-thumb {
-            position: relative;
-            z-index: 100;
-            appearance: none;
-            width: em(25, 16);
-            height: em(25, 16);
-            border-radius: 50%;
-            background: white;
-            cursor: pointer;
-
-            &:hover {
-                background-color: $clr11;
-                border: 2px solid $clr16;
-            }
-        }
-
-        #progressBar::-webkit-progress-bar {
-            background-color: $clr15;
-        }
-        #progressBar::-webkit-progress-value {
-            background-color: $clr16;
-        }
-
-        /* Firefox */
-        #slider::-moz-range-thumb {
-            position: relative;
-            z-index: 100;
-            top: 0;
-            left: 0;
-            width: em(25, 16);
-            height: em(25, 16);
-            border-radius: 50%;
-            background: white;
-            cursor: pointer;
-        }
-        #slider::-moz-range-thumb:hover {
-            background-color: $clr11;
-            border: 2px solid $clr16;
-        }
-        #progressBar::-moz-progress-bar {
-            background-color: $clr16;
-        }
-        /* Microsoft Edge */
-        #slider::-ms-thumb {
-            position: relative;
-            z-index: 100;
-            top: 0;
-            left: 0;
-            width: em(25, 16);
-            height: em(25, 16);
-            border-radius: 50%;
-            background: white;
-            cursor: pointer;
-        }
-        #slider::-ms-thumb:hover {
-            background-color: $clr11;
-            border: 2px solid $clr16;
-        }
-        #progressBar::-ms-fill {
-            background-color: $clr16;
-        }
-    }
-
-    .checkBox {
-        margin-block: em(32, 16);
-
-        & > * {
-            margin-bottom: em(19, 16);
-
-            label {
-                display: flex;
-                justify-content: flex-start;
-                gap: em(24, 16);
-                cursor: pointer;
-            }
-
-            input[type='checkbox'] {
-                cursor: pointer;
-                appearance: none;
-                outline: 0;
-                background-color: $clr11;
-                height: em(20, 16);
-                aspect-ratio: 1/1;
-                color: white;
-                border: 2px solid white;
-            }
-            input[type='checkbox']:checked {
-                background-color: $clr16;
-                border: 2px solid $clr16;
-                color: $clr11;
-            }
-            input[type='checkbox']:after {
-                content: '';
-                position: relative;
-                left: 25%;
-                top: 0%;
-                width: em(8, 16);
-                height: em(12, 16);
-                border: solid $clr11;
-                border-width: 0px 3px 3px 0px;
-                transform: rotate(50deg);
-                display: none;
-            }
-
-            input[type='checkbox']:checked:after {
-                display: block;
-            }
-        }
-    }
-
-    .strength {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        &__indicator {
-            display: flex;
-            justify-content: center;
-            gap: em(16, 16);
-        }
-
-        .meter {
-            display: flex;
-            gap: em(8, 16);
-
-            & > * {
-                width: em(10, 16);
-                height: em(28, 16);
-                border: 1px solid $clr14;
-            }
-
-            .strong {
-                border: 1px solid $clr16;
-            }
-            .medium {
-                border: 1px solid $clr19;
-            }
-            .weak {
-                border: 1px solid $clr18;
-            }
-            .tooweak {
-                border: 1px solid $clr17;
-            }
-        }
-    }
-
-    .generate {
-        margin-top: em(32, 16);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: em(24, 16);
-        padding-block: em(20, 16);
-        border: 2px solid $clr16;
-        cursor: pointer;
-
-        svg path {
-            fill: $clr11;
-        }
-
-        &:hover {
-            background-color: $clr11;
-
-            .generate--H3 {
-                color: $clr16;
-            }
-            svg path {
-                fill: $clr16;
-            }
-        }
-        &:active {
-            transform: translateY(2px);
-        }
-    }
-    .default {
-        background-color: $clr99;
-        opacity: 0.5;
-        &:hover {
-            background-color: $clr99;
-            .generate--H3 {
-                color: $clr11;
-            }
-            svg path {
-                fill: $clr11;
-            }
-        }
-        &:active {
-            transform: translateY(0);
-        }
+.encode,
+.decode {
+    H2 {
+        text-align: center;
+        max-width: 50%;
+        margin: 0 auto;
+        border-radius: 5px;
+        line-height: em(32, 16);
+        box-shadow: 0px 0px 10px $clr20;
+        border: solid 1px $clr20; 
     }
 }

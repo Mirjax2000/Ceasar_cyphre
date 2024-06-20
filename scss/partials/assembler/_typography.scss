@@ -285,18 +285,34 @@
 //     font-weight: 700;
 // }
 
-// // JetBrainsMono - 700 - bold
+// // // JetBrainsMono - 700 - bold
+// @font-face {
+//     font-family: 'JetBrainsMono';
+//     src: url(../assets/webfonts/Font-face/JetBrainsMono-Bold.woff2) format('woff2'),
+//         url(../assets/webfonts/Font-face/JetBrainsMono-Bold.ttf) format('truetype');
+//     font-weight: 700;
+// }
+// // // JetBrainsMono - 700 - bolditalic
+// @font-face {
+//     font-family: 'JetBrainsMono';
+//     src: url(../assets/webfonts/Font-face/JetBrainsMono-Bolditalic.woff2) format('woff2'),
+//         url(../assets/webfonts/Font-face/JetBrainsMono-Bolditalic.ttf) format('truetype');
+//     font-weight: 700;
+//     font-style: italic;
+// }
+
+// Source Sans pro - variable
 @font-face {
-    font-family: 'JetBrainsMono';
-    src: url(../assets/webfonts/Font-face/JetBrainsMono-Bold.woff2) format('woff2'),
-        url(../assets/webfonts/Font-face/JetBrainsMono-Bold.ttf) format('truetype');
-    font-weight: 700;
+    font-family: 'Source Sans Pro';
+    src: url(../assets/webfonts/static/SourceCodePro-VariableFont_wght.ttf)
+    format('truetype-variations');
+    font-weight: 200 900;
+    font-display: swap;
 }
-// // JetBrainsMono - 700 - bolditalic
 @font-face {
-    font-family: 'JetBrainsMono';
-    src: url(../assets/webfonts/Font-face/JetBrainsMono-Bolditalic.woff2) format('woff2'),
-        url(../assets/webfonts/Font-face/JetBrainsMono-Bolditalic.ttf) format('truetype');
-    font-weight: 700;
-    font-style: italic;
+    font-family: Cinzel;
+    src: url(../assets/webfonts/static/Cinzel-VariableFont_wght.ttf)
+    format('truetype-variations');
+    font-weight: 200 900;
+    font-display: swap;
 }

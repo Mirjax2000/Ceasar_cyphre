@@ -50,9 +50,7 @@
     max-width: $width;
     height: 100svh;
     margin-inline: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 }
 
 @mixin radialGradient($background: $backroundGradient) {
